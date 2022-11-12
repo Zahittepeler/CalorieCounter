@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_fragment"
+    app:startDestination="@id/calorieFragment">
+
+    <fragment
+        android:id="@+id/calorieFragment"
+        android:name="com.example.caloriecounter.CalorieFragment"
+        android:label="fragment_calorie"
+        tools:layout="@layout/fragment_calorie" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.caloriecounter.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/profilFragment"
+        android:name="com.example.caloriecounter.ProfilFragment"
+        android:label="fragment_profil"
+        tools:layout="@layout/fragment_profil" >
+        <action
+            android:id="@+id/action_profilFragment_to_calorieFragment"
+            app:destination="@id/calorieFragment" />
+    </fragment>
+</navigation>
