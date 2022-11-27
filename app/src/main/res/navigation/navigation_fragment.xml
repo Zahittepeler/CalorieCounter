@@ -10,11 +10,6 @@
         android:name="com.example.caloriecounter.CalorieFragment"
         android:label="fragment_calorie"
         tools:layout="@layout/fragment_calorie" />
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.example.caloriecounter.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" />
     <fragment
         android:id="@+id/profilFragment"
         android:name="com.example.caloriecounter.ProfilFragment"

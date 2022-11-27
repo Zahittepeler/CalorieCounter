@@ -4,4 +4,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="odev_txt">Ödevimi yaptım</string>
     <string name="odev_txt2">Ödevim tamam</string>
+    <string name="main_tile">Öğün Listem</string>
+    <string name="main_two_tile">Kahvaltı</string>
+    <string name="main_icerik">-Yumurta</string>
+
 </resources>
