@@ -7,5 +7,20 @@
     <string name="main_tile">Öğün Listem</string>
     <string name="main_two_tile">Kahvaltı</string>
     <string name="main_icerik">-Yumurta</string>
+    <string name="main_icerik_iki">-Süt</string>
+    <string name="page_one_text">İdman Ekle</string>
+    <string name="page_one_text_two">Total: -1865</string>
+
+
+
+    ------------------------------------------------------
+
+    <string name="meal_eaten_page_title_one">İdman</string>
+    <string name="meal_eaten_page_text_one">İdman Adı</string>
+    <string name="meal_eaten_page_text_two">İdman Türü</string>
+    <string name="meal_eaten_page_text_Three">İdman Miktarı</string>
+    <string name="meal_eaten_page_text_four">Manuel Yakınlan Kalori Gir</string>
+    <string name="meal_eaten_page_text_five">Ekle</string>
+
 
 </resources>
