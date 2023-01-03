@@ -152,7 +152,7 @@
 
 
                 <EditText
-                    android:id="@+id/manually_Input_Calories"
+                    android:id="@+id/manually_exit_Calories"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/meal_eaten_page_text_four"
@@ -165,23 +165,6 @@
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

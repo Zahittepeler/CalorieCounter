@@ -8,7 +8,7 @@
     <string name="main_two_tile">Kahvaltı</string>
     <string name="main_icerik">-Yumurta</string>
     <string name="main_icerik_iki">-Süt</string>
-    <string name="page_one_text">İdman Ekle</string>
+    <string name="page_one_text">Öğün Ekle</string>
     <string name="page_one_text_two">Total: -1865</string>
 
 
@@ -21,6 +21,46 @@
     <string name="meal_eaten_page_text_Three">İdman Miktarı</string>
     <string name="meal_eaten_page_text_four">Manuel Yakınlan Kalori Gir</string>
     <string name="meal_eaten_page_text_five">Ekle</string>
+
+
+
+    --------------------------------------------------------------
+
+    <string name="meal_burned_page_text_one">Öğün Adı</string>
+    <string name="meal_burned_page_text_two">Besin Seç</string>
+    <string name="meal_burned_page_text_three">Besin Miktarı</string>
+    <string name="meal_burned_page_text_four">Besin Miktarı</string>
+    <string name="meal_eburned_page_text_five">Manual Kalori Gir</string>
+
+
+    ------------------------------------------------------------
+
+    <string name="fragment_burned_text_one">İdman Listem</string>
+    <string name="fragment_burned_text_two">Adım</string>
+    <string name="fragment_burned_text_three">-8966 Adım</string>
+    <string name="fragment_burned_text_four">Uyku</string>
+    <string name="fragment_burned_text_five">-8 Saat</string>
+    <string name="fragment_burned_text_six">Fitness</string>
+    <string name="fragment_burned_text_seven">-1 Saat</string>
+    <string name="fragment_burned_text_eight">Tüketilen Su</string>
+    <string name="fragment_burned_text_nigth">-8 Bardak</string>
+    <string name="fragment_burned_text_ten">İdman ekle</string>
+    <string name="fragment_burned_text_eleven">total:</string>
+    <string name="fragment_burned_text_twelve">-1568 k</string>
+
+    -----------------------------------------------------------
+
+    <string name="fragment_profil_text_one">Profil</string>
+    <string name="fragment_profil_text_two">Düzenle</string>
+    <string name="fragment_profil_text_three">Ali Veli Kısa</string>
+    <string name="fragment_profil_text_four">Erkek</string>
+    <string name="fragment_profil_text_five">19 Yaş</string>
+    <string name="fragment_profil_text_six">75 Kg</string>
+    <string name="fragment_profil_text_seven">Geçmiş Kalorim</string>
+    <string name="fragment_profil_text_eight">-75 C</string>
+    <string name="fragment_profil_text_nigth">+131 C</string>
+    <string name="fragment_profil_text_ten">+200 C</string>
+
 
 
 </resources>
