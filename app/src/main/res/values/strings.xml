@@ -10,7 +10,7 @@
     <string name="main_icerik_iki">-Süt</string>
     <string name="page_one_text">Öğün Ekle</string>
     <string name="page_one_text_two">Total: -1865</string>
-
+    <string name="profil_gecicitxt">Profil Sayfası</string>
 
 
     ------------------------------------------------------
@@ -21,7 +21,6 @@
     <string name="meal_eaten_page_text_Three">İdman Miktarı</string>
     <string name="meal_eaten_page_text_four">Manuel Yakınlan Kalori Gir</string>
     <string name="meal_eaten_page_text_five">Ekle</string>
-
 
 
     --------------------------------------------------------------
@@ -60,7 +59,6 @@
     <string name="fragment_profil_text_eight">-75 C</string>
     <string name="fragment_profil_text_nigth">+131 C</string>
     <string name="fragment_profil_text_ten">+200 C</string>
-
 
 
 </resources>

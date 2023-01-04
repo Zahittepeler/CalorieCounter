@@ -27,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="@string/meal_eaten_page_title_one"
+                android:text="@string/meal_burned_page_text_one"
                 android:textColor="@color/orange"
                 android:textSize="24sp"
                 android:textStyle="bold"
