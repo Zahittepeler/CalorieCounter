@@ -61,4 +61,10 @@
     <string name="fragment_profil_text_ten">+200 C</string>
 
 
+    -----------------------------------------------------main
+
+    <string name="nav_main_eat_calori">Alınan Kalori</string>
+    <string name="nav_main_burned_calori">Yakılan Kalori</string>
+    <string name="nav_main_profil">Profil</string>
+
 </resources>

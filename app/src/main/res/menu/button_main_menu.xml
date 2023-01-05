@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nested_graph_read"
+        android:icon="@drawable/nav1"
+        android:title="@string/nav_main_eat_calori"
+        android:contentDescription="@string/nav_main_eat_calori"/>
+    <item
+        android:id="@+id/nested_graph_notes"
+        android:icon="@drawable/nav2"
+        android:title="@string/nav_main_burned_calori"
+        android:contentDescription="@string/nav_main_burned_calori"/>
+    <item
+        android:id="@+id/nested_graph_archive"
+        android:icon="@drawable/nav3"
+        android:title="@string/nav_main_profil"
+        android:contentDescription="@string/nav_main_profil"/>
+</menu>

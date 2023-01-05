@@ -18,6 +18,11 @@ class CalorieFragment : Fragment() {
         if (binding == null)
             binding = FragmentCalorieBinding.inflate(inflater)
         return binding?.root
+
+    }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        (requireActivity() as MainActivity).setBottomNavigationVisibility(true)
     }
 
 
