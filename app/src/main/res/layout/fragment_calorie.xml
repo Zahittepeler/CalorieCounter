@@ -258,19 +258,17 @@
                 app:layout_constraintEnd_toEndOf="@id/add_meal_eating"/>
 
 
-
-
             <ImageView
                 android:id="@+id/yellow"
                 android:layout_width="90dp"
                 android:layout_height="90dp"
+                android:layout_marginStart="60dp"
                 android:layout_marginEnd="20dp"
                 android:src="@drawable/yellow"
-                android:layout_marginStart="60dp"
                 app:layout_constraintBottom_toBottomOf="@id/add_meal"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/add_meal_eating"/>
-
+                app:layout_constraintHorizontal_bias="0.515"
+                app:layout_constraintStart_toEndOf="@id/add_meal_eating" />
 
             <TextView
                 android:id="@+id/meal_burned"
