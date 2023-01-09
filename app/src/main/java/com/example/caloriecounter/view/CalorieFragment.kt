@@ -18,7 +18,7 @@ import kotlinx.android.synthetic.main.fragment_calorie.*
 
 class CalorieFragment : Fragment() {
 
-    private var viewModel : CalorieFragmentViewModel by
+    private lateinit var viewModel : CalorieFragmentViewModel
     val adapter = MealModelAdapter(arrayListOf())
 
     private var binding:FragmentCalorieBinding? = null
@@ -54,7 +54,7 @@ class CalorieFragment : Fragment() {
 
 
     fun observeLiveData() {
-        viewModel.meals.observe(this, Observer {
+        viewModel.meals.observe(viewLifecycleOwner, Observer {
             mealList.visibility = View.VISIBLE
         })
     }

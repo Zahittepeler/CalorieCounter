@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.caloriecounter.R
 import com.example.caloriecounter.model.MealModel
-import kotlinx.android.synthetic.main.bosss.view.*
+import kotlinx.android.synthetic.main.item_meal.view.*
 
 class MealModelAdapter(val mealNameList: ArrayList<MealModel>) : RecyclerView.Adapter<MealModelAdapter.MealViewHolder>(){
     class MealViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
