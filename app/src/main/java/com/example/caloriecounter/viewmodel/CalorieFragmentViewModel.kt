@@ -7,7 +7,7 @@ import java.nio.channels.spi.AbstractSelectionKey
 
 
 class CalorieFragmentViewModel  : ViewModel() {
-            val meals = MutableLiveData<List<MealModel>>()
+            val meals = MutableLiveData<MutableList<MealModel>>()
 
 
      fun refreshData() {
@@ -15,7 +15,7 @@ class CalorieFragmentViewModel  : ViewModel() {
          val mealTwo = MealModel("Öğlen")
          val mealThree = MealModel("Akşam")
 
-         val mealList = arrayListOf<MealModel>(mealOne,mealTwo,mealThree)
+         val mealList = mutableListOf<MealModel>(mealOne,mealTwo,mealThree)
 
          meals.value = mealList
 

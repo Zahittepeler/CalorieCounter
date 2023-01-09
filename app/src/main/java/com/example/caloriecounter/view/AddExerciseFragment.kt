@@ -8,16 +8,10 @@ import android.view.ViewGroup
 import com.example.caloriecounter.R
 
 
-
 class MealEatenFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
 
-        }
-    }
-
-     fun onCreateView(
+    override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
@@ -25,3 +19,4 @@ class MealEatenFragment : Fragment() {
     }
 
 
+}

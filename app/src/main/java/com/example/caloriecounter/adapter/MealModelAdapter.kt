@@ -9,7 +9,13 @@ import com.example.caloriecounter.R
 import com.example.caloriecounter.model.MealModel
 import kotlinx.android.synthetic.main.item_meal.view.*
 
-class MealModelAdapter(val mealNameList: ArrayList<MealModel>) : RecyclerView.Adapter<MealModelAdapter.MealViewHolder>(){
+class MealModelAdapter(var mealNameList: MutableList<MealModel>) : RecyclerView.Adapter<MealModelAdapter.MealViewHolder>(){
+
+    fun setList(mealNameList: MutableList<MealModel>) {
+       this.mealNameList = mealNameList
+        notifyDataSetChanged()
+    }
+
     class MealViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
 
    }
