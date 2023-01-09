@@ -39,13 +39,10 @@
                 android:id="@+id/mealList"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                app:layout_constraintBottom_toTopOf="@+id/yellow"
+                app:layout_constraintBottom_toTopOf="@+id/add_meal_eating"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintEnd_toStar="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/title_text"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintTop_toBottomOf="@+id/title_text" />
 
             <TextView
                 android:id="@+id/title_text"
@@ -95,7 +92,7 @@
                 android:src="@drawable/yellow"
                 app:layout_constraintBottom_toBottomOf="@id/add_meal"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.515"
+                app:layout_constraintTop_toTopOf="@+id/add_meal_eating"
                 app:layout_constraintStart_toEndOf="@id/add_meal_eating" />
 
             <TextView
