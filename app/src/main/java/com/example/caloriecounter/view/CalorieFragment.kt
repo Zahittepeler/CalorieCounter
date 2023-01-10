@@ -58,4 +58,3 @@ class CalorieFragment : Fragment() {
             mealList.visibility = View.VISIBLE
         })
     }
-}
