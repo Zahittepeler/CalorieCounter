@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested_graph_meal"
+    app:startDestination="@id/mealAddFragment">
+    <fragment
+        android:id="@+id/mealAddFragment"
+        android:name="com.example.caloriecounter.view.MealAddFragment"
+        android:label="MealAddFragment" >
+        <action
+            android:id="@+id/action_mealAddFragment_to_calorieFragment2"
+            app:destination="@id/calorieFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/calorieFragment2"
+        android:name="com.example.caloriecounter.view.CalorieFragment"
+        android:label="CalorieFragment" >
+        <action
+            android:id="@+id/action_calorieFragment2_to_mealAddFragment"
+            app:destination="@id/mealAddFragment" />
+    </fragment>
+</navigation>

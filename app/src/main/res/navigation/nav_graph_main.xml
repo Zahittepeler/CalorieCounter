@@ -6,4 +6,5 @@
     <include app:graph="@navigation/nested_graph_eat_calori" />
     <include app:graph="@navigation/nested_graph_burned_calori" />
     <include app:graph="@navigation/nested_graph_profil" />
+    <include app:graph="@navigation/add_meal_nav" />
 </navigation>

@@ -3,27 +3,29 @@ package com.example.caloriecounter.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.caloriecounter.R
 import com.example.caloriecounter.model.MealModel
 import kotlinx.android.synthetic.main.item_meal.view.*
 
-class MealModelAdapter(var mealNameList: MutableList<MealModel>) : RecyclerView.Adapter<MealModelAdapter.MealViewHolder>(){
+class MealModelAdapter(private var mealNameList: MutableList<MealModel>) :
+    RecyclerView.Adapter<MealModelAdapter.MealViewHolder>() {
 
     fun setList(mealNameList: MutableList<MealModel>) {
-       this.mealNameList = mealNameList
+
+        this.mealNameList = mealNameList
+
         notifyDataSetChanged()
     }
 
-    class MealViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
+    class MealViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-   }
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MealViewHolder {
 
         val inflater = LayoutInflater.from(parent.context)
-        val view = inflater.inflate(R.layout.item_meal,parent,false)
+        val view = inflater.inflate(R.layout.item_meal, parent, false)
         return MealViewHolder(view)
 
     }
@@ -35,5 +37,6 @@ class MealModelAdapter(var mealNameList: MutableList<MealModel>) : RecyclerView.
     }
 
     override fun getItemCount(): Int {
-       return   mealNameList.size    }
+        return mealNameList.size
+    }
 }

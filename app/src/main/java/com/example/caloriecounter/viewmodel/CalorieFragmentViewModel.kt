@@ -3,7 +3,6 @@ package com.example.caloriecounter.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.caloriecounter.model.MealModel
-import java.nio.channels.spi.AbstractSelectionKey
 
 
 class CalorieFragmentViewModel  : ViewModel() {
@@ -14,10 +13,14 @@ class CalorieFragmentViewModel  : ViewModel() {
          val mealOne = MealModel("Kahvaltı")
          val mealTwo = MealModel("Öğlen")
          val mealThree = MealModel("Akşam")
+         val mealFour = MealModel("ara")
+         val mealFive = MealModel("ara")
+         val mealSix = MealModel("ara")
+         val mealSeven = MealModel("ara")
 
-         val mealList = mutableListOf<MealModel>(mealOne,mealTwo,mealThree)
+         val mealList = mutableListOf<MealModel>(mealOne,mealTwo,mealThree,mealFive,mealFour,mealSix,mealSeven)
 
-         meals.value = mealList
+         this.meals.value = mealList
 
      }
 

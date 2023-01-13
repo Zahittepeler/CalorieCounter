@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nested_graph_eat_calori"
-    app:startDestination="@id/calorieFragment2">
+    app:startDestination="@id/calorieFragment">
 
     <fragment
-        android:id="@+id/calorieFragment2"
+        android:id="@+id/calorieFragment"
         android:name="com.example.caloriecounter.view.CalorieFragment"
         android:label="CalorieFragment"
         tools:layout="@layout/fragment_calorie"/>
