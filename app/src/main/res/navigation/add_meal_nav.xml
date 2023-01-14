@@ -3,21 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nested_graph_meal"
-    app:startDestination="@id/mealAddFragment">
+    app:startDestination="@id/calorieFragment">
+    <fragment
+        android:id="@+id/calorieFragment"
+        android:name="com.example.caloriecounter.view.CalorieFragment"
+        android:label="fragment_calorie"
+        tools:layout="@layout/fragment_calorie" >
+        <action
+            android:id="@+id/action_calorieFragment_to_mealAddFragment"
+            app:destination="@id/mealAddFragment" />
+    </fragment>
     <fragment
         android:id="@+id/mealAddFragment"
         android:name="com.example.caloriecounter.view.MealAddFragment"
         android:label="MealAddFragment" >
+        <argument
+            android:name="number"
+            app:argType="integer"
+            android:defaultValue="2" />
         <action
-            android:id="@+id/action_mealAddFragment_to_calorieFragment2"
-            app:destination="@id/calorieFragment2" />
-    </fragment>
-    <fragment
-        android:id="@+id/calorieFragment2"
-        android:name="com.example.caloriecounter.view.CalorieFragment"
-        android:label="CalorieFragment" >
-        <action
-            android:id="@+id/action_calorieFragment2_to_mealAddFragment"
-            app:destination="@id/mealAddFragment" />
+            android:id="@+id/action_mealAddFragment_to_calorieFragment"
+            app:destination="@id/calorieFragment" />
     </fragment>
 </navigation>

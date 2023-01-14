@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.NavDirections
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.caloriecounter.R
@@ -14,6 +16,7 @@ import com.example.caloriecounter.adapter.MealModelAdapter
 import com.example.caloriecounter.databinding.FragmentCalorieBinding
 import com.example.caloriecounter.model.MealModel
 import com.example.caloriecounter.viewmodel.CalorieFragmentViewModel
+import kotlinx.android.synthetic.main.fragment_burned.view.*
 import kotlinx.android.synthetic.main.fragment_calorie.*
 
 class CalorieFragment : Fragment() {
@@ -21,7 +24,8 @@ class CalorieFragment : Fragment() {
     private lateinit var viewModel : CalorieFragmentViewModel
     private val adapter = MealModelAdapter(arrayListOf())
 
-    private var binding:FragmentCalorieBinding? = null
+    private var binding : FragmentCalorieBinding? = null
+
 
 
 
@@ -53,11 +57,12 @@ class CalorieFragment : Fragment() {
 
         observeLiveData()
 
-        binding?.addMeal?.setOnClickListener {
-            findNavController().navigate(R.id.action_calorieFragment2_to_mealAddFragment)
-        }
 
+            binding?.addMeal?.setOnClickListener {
+                val action = CalorieFragmentDirections.actionCalorieFragmentToMealAddFragment()
+                findNavController().navigate(action)
     }
+            }
 
 
     private fun observeLiveData() {
