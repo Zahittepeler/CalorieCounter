@@ -17,7 +17,9 @@ import kotlinx.coroutines.launch
 
 
 class AddMealApiViewModel(appilacation : Application) : BaseViewModel(appilacation){
+    private val foodApiService = FoodsAPIService()
 
+    private var refreshTime = 10 * 60 * 1000 * 1000 * 1000L
     val apiFoods = MutableLiveData<List<Foods>>()
     val foodsApiService = FoodsAPIService()
     val disposable = CompositeDisposable()
@@ -26,9 +28,24 @@ class AddMealApiViewModel(appilacation : Application) : BaseViewModel(appilacati
 
 
 
+    fun refreshData() {
 
+        val updateTime = customPreferences.getTime()
+        if (updateTime != null && updateTime != 0L && System.nanoTime() - updateTime < refreshTime) {
+            getDataFromSQLite()
+        } else {
+            getDataFromApi()
+        }
 
+    }
 
+    private fun getDataFromSQLite() {
+                launch {
+            val foods = FoodDatabase(getApplication()).countryDao().getAllFood()
+            showFoods(foods)
+
+        }
+    }
     private fun getDataFromApi() {
 
         disposable.add(

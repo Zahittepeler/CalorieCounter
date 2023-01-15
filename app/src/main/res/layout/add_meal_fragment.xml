@@ -99,7 +99,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/imageRecyclerView"
+                android:id="@+id/foodListApiRV"
                 android:layout_width="match_parent"
                 android:background="@drawable/search1"
                 android:layout_height="wrap_content"

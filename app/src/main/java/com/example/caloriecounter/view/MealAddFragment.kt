@@ -4,28 +4,23 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
-import android.view.View.inflate
 import android.view.ViewGroup
-import androidx.core.content.res.ColorStateListInflaterCompat.inflate
-import androidx.core.widget.addTextChangedListener
-import androidx.databinding.DataBindingUtil.inflate
-import androidx.fragment.app.DialogFragment
-import androidx.lifecycle.lifecycleScope
-import androidx.navigation.fragment.navArgs
-import com.example.caloriecounter.R
-import com.example.caloriecounter.databinding.ActivityMainBinding.inflate
-import com.example.caloriecounter.databinding.ActivitySplashScreenBinding.inflate
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.caloriecounter.adapter.ApiAdapter
 import com.example.caloriecounter.databinding.AddMealFragmentBinding
-import com.example.caloriecounter.databinding.FragmentCalorieBinding
+import com.example.caloriecounter.model.Foods
+import com.example.caloriecounter.viewmodel.AddMealApiViewModel
 import kotlinx.android.synthetic.main.add_meal_fragment.*
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 
 
 class MealAddFragment : Fragment() {
 
     private var fragmentBinding:AddMealFragmentBinding? = null
+
+    private lateinit var viewModel: AddMealApiViewModel
+    private val adapter = ApiAdapter(arrayListOf())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,9 +39,29 @@ class MealAddFragment : Fragment() {
 
         }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+            viewModel = ViewModelProvider(this)[AddMealApiViewModel::class.java]
+            viewModel.refreshData()
+
+            foodListApiRV.layoutManager = LinearLayoutManager(context)
+            foodListApiRV.adapter
 
 
     }
+
+    private fun observeLiveData() {
+        viewModel.apiFoods.observe(viewLifecycleOwner, Observer {countries ->
+
+            countries?.let {
+                foodListApiRV.visibility = View.VISIBLE
+                          }
+
+        })
+
+    }
+     }
 
 
 
