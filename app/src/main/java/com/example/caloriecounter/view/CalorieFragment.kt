@@ -21,12 +21,10 @@ import kotlinx.android.synthetic.main.fragment_calorie.*
 
 class CalorieFragment : Fragment() {
 
-    private lateinit var viewModel : CalorieFragmentViewModel
+    private lateinit var viewModel: CalorieFragmentViewModel
     private val adapter = MealModelAdapter(arrayListOf())
 
-    private var binding : FragmentCalorieBinding? = null
-
-
+    private var binding: FragmentCalorieBinding? = null
 
 
     override fun onCreateView(
@@ -38,8 +36,8 @@ class CalorieFragment : Fragment() {
         return binding?.root
 
 
-
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         (requireActivity() as MainActivity).setBottomNavigationVisibility(true)
@@ -58,11 +56,10 @@ class CalorieFragment : Fragment() {
         observeLiveData()
 
 
-            binding?.addMeal?.setOnClickListener {
-                val action = CalorieFragmentDirections.actionCalorieFragmentToMealAddFragment()
-                findNavController().navigate(action)
+        binding?.addMeal?.setOnClickListener {
+            findNavController().navigate(R.id.action_calorieFragment2_to_mealAddFragment)
+        }
     }
-            }
 
 
     private fun observeLiveData() {
@@ -72,7 +69,6 @@ class CalorieFragment : Fragment() {
             adapter.setList(it)
 
 
-
         })
     }
-    }
+}

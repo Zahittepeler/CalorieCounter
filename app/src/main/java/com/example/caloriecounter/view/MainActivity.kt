@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
 
         bottomNavigationView?.itemIconTintList = null
 
+
     }
 
     fun setBottomNavigationVisibility(isVisible: Boolean) {

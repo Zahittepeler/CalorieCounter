@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nested_graph_eat_calori"
-    app:startDestination="@id/calorieFragment">
+    app:startDestination="@id/calorieFragment2">
 
     <fragment
-        android:id="@+id/calorieFragment"
+        android:id="@+id/calorieFragment2"
         android:name="com.example.caloriecounter.view.CalorieFragment"
-        android:label="CalorieFragment"
-        tools:layout="@layout/fragment_calorie"/>
+        android:label="CalorieFragment" >
+        <action
+            android:id="@+id/action_calorieFragment2_to_mealAddFragment"
+            app:destination="@id/mealAddFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mealAddFragment"
+        android:name="com.example.caloriecounter.view.MealAddFragment"
+        android:label="MealAddFragment" />
 </navigation>
