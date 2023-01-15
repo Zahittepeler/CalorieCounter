@@ -39,6 +39,8 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
 
+
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl_one"
                 android:layout_width="300dp"
@@ -100,17 +102,17 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/foodListApiRV"
-                android:layout_width="match_parent"
-                android:background="@drawable/search1"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="@+id/cl_two"
-                app:layout_constraintEnd_toEndOf="@+id/cl_two"
-                app:layout_constraintTop_toBottomOf="@id/cl_two"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cl_two"
+                app:layout_constraintBottom_toTopOf="@+id/cl_three"/>
 
 
 
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+           <!-- <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl_three"
                 android:layout_width="300dp"
                 android:layout_height="50dp"
@@ -118,7 +120,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
-                app:layout_constraintTop_toBottomOf="@+id/imageRecyclerView"
+                app:layout_constraintTop_toBottomOf="@+id/foodListApiRV"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent">
 
@@ -136,12 +138,12 @@
                     app:layout_constraintBottom_toBottomOf="parent"/>
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>-->
 
 
 
 
-            <View
+          <!--  <View
                 android:id="@+id/line"
                 android:layout_width="260dp"
                 android:layout_height="3dp"
@@ -149,11 +151,11 @@
                 android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cl_three"/>
+                app:layout_constraintTop_toBottomOf="@id/cl_three"/>-->
 
 
 
-
+<!--
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl_four"
                 android:layout_width="300dp"
@@ -180,7 +182,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"/>
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>-->
 
 
 
@@ -213,7 +215,6 @@
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
     </androidx.cardview.widget.CardView>
 

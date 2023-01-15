@@ -29,7 +29,7 @@ class AddMealApiViewModel(appilacation : Application) : BaseViewModel(appilacati
 
 
     fun refreshData() {
-
+        val foodOne = Foods("elma",110,"meyve","yok","yok")
         val updateTime = customPreferences.getTime()
         if (updateTime != null && updateTime != 0L && System.nanoTime() - updateTime < refreshTime) {
             getDataFromSQLite()

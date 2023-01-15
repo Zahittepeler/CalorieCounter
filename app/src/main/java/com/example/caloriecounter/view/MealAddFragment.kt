@@ -10,7 +10,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.caloriecounter.adapter.ApiAdapter
 import com.example.caloriecounter.databinding.AddMealFragmentBinding
-import com.example.caloriecounter.model.Foods
 import com.example.caloriecounter.viewmodel.AddMealApiViewModel
 import kotlinx.android.synthetic.main.add_meal_fragment.*
 
@@ -52,9 +51,9 @@ class MealAddFragment : Fragment() {
     }
 
     private fun observeLiveData() {
-        viewModel.apiFoods.observe(viewLifecycleOwner, Observer {countries ->
-
-            countries?.let {
+        viewModel.apiFoods.observe(viewLifecycleOwner, Observer {it ->
+                adapter.setApiList(it)
+            it?.let {
                 foodListApiRV.visibility = View.VISIBLE
                           }
 

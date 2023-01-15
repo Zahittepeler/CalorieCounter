@@ -6,14 +6,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.caloriecounter.model.Foods
 import com.example.caloriecounter.R
-import com.example.caloriecounter.model.MealModel
-import com.example.caloriecounter.view.MealAddFragment
 import kotlinx.android.synthetic.main.item_list_api.view.*
 
 
 class ApiAdapter(private var apiMealList: MutableList<Foods>) : RecyclerView.Adapter<ApiAdapter.ApiViewHolder>() {
 
-    fun setApiList(mealNameList: MutableList<MealModel>) {
+    fun setApiList(mealNameList: List<Foods>) {
 
         this.apiMealList = apiMealList
 
