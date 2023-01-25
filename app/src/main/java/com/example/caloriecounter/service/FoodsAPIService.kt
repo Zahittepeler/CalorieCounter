@@ -1,6 +1,7 @@
 package com.example.caloriecounter.service
 
 import com.example.caloriecounter.model.Foods
+import io.reactivex.Observable
 import io.reactivex.Single
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -19,9 +20,9 @@ class FoodsAPIService {
         .create(FoodAPI::class.java)
 
 
-        fun getData() : Single<List<Foods>> {
+    fun getData() : Single<List<Foods>> {
             return api.getFoods()
-        }
+    }
 
 
 

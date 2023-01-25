@@ -9,9 +9,9 @@ import com.example.caloriecounter.model.Foods
 @Database(entities = arrayOf(Foods::class),version = 1)
 abstract class FoodDatabase : RoomDatabase() {
 
-    abstract fun countryDao() : FoodDAO
+    abstract fun foodDao() : FoodDAO
 
-    //Singleton
+
 
     companion object {
 
@@ -27,7 +27,7 @@ abstract class FoodDatabase : RoomDatabase() {
 
 
         private fun makeDatabase(context : Context) = Room.databaseBuilder(
-            context.applicationContext,FoodDatabase::class.java,"countrydatabase"
+            context.applicationContext,FoodDatabase::class.java,"fooddatabase"
         ).build()
     }
 }

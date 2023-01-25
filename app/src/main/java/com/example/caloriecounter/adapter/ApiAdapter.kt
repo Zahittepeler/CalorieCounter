@@ -9,14 +9,19 @@ import com.example.caloriecounter.R
 import kotlinx.android.synthetic.main.item_list_api.view.*
 
 
-class ApiAdapter(private var apiMealList: MutableList<Foods>) : RecyclerView.Adapter<ApiAdapter.ApiViewHolder>() {
+class ApiAdapter() : RecyclerView.Adapter<ApiAdapter.ApiViewHolder>() {
 
-    fun setApiList(mealNameList: List<Foods>) {
+    private var apiMealList = mutableListOf<Foods>()
 
-        this.apiMealList = apiMealList
+    /*
+    fun setApiList(mealNameList: MutableList<Foods>) {
+
+        this.apiMealList = mealNameList
 
         notifyDataSetChanged()
     }
+
+     */
 
     class ApiViewHolder(view: View) : RecyclerView.ViewHolder(view)
 
@@ -29,12 +34,18 @@ class ApiAdapter(private var apiMealList: MutableList<Foods>) : RecyclerView.Ada
 
     override fun onBindViewHolder(holder: ApiViewHolder, position: Int)  {
 
-                holder.itemView.meal_name.text = apiMealList[position].besinIsimleri
-                holder.itemView.meal_calorie.text = apiMealList[position].kaloriMiktari.toString()
-        }
+        holder.itemView.meal_name.text = apiMealList[position].besinIsimleri
+        holder.itemView.meal_calorie.text = apiMealList[position].kaloriMiktari.toString()
+    }
 
     override fun getItemCount(): Int {
         return apiMealList.size
 
+    }
+
+    fun updateList(mealList : List<Foods> ){
+        apiMealList.clear()
+        apiMealList.addAll(mealList)
+        notifyDataSetChanged()
     }
 }

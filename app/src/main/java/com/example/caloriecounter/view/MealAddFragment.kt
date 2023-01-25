@@ -19,7 +19,7 @@ class MealAddFragment : Fragment() {
     private var fragmentBinding:AddMealFragmentBinding? = null
 
     private lateinit var viewModel: AddMealApiViewModel
-    private val adapter = ApiAdapter(arrayListOf())
+    private val adapter = ApiAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,32 +35,33 @@ class MealAddFragment : Fragment() {
             fragmentBinding = AddMealFragmentBinding.inflate(inflater)
         return fragmentBinding?.root
 
-
         }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
             viewModel = ViewModelProvider(this)[AddMealApiViewModel::class.java]
-            viewModel.refreshData()
 
-            foodListApiRV.layoutManager = LinearLayoutManager(context)
-            foodListApiRV.adapter
 
+            viewModel.getDataViewModel()
+
+
+
+        foodListApiRV.layoutManager = LinearLayoutManager(context)
+        foodListApiRV.adapter = adapter
+
+
+        observeLiveData()
 
     }
-
     private fun observeLiveData() {
-        viewModel.apiFoods.observe(viewLifecycleOwner, Observer {it ->
-                adapter.setApiList(it)
-            it?.let {
-                foodListApiRV.visibility = View.VISIBLE
-                          }
+        viewModel.apiFoods.observe(viewLifecycleOwner, Observer {
+            println(it)
+            adapter.updateList(it)
 
         })
 
     }
-     }
+}
 
 
 
